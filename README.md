@@ -1,6 +1,6 @@
 # HSTS Header Plugin
 
-This plugin allows you to set HTTP HSTS Header in your template.
+This plugin allows you to set the HTTP HSTS Header in a template.
 
 ## Usage
 
@@ -8,7 +8,7 @@ This plugin allows you to set HTTP HSTS Header in your template.
 
 #### Example Usage
 
-This is a single tag that will set the HSTS header to whatever you specify for the variable elements.
+This is a single tag that will set the HSTS header to sensible default values or whatever you specify for the parameters available.
 
 ##### Simple usage
 
@@ -28,10 +28,10 @@ This will set a header equivalent to
 
 #### Parameters
 
-- `max_age=` - Sets the value for the max-age parameter (default max_age="86400")
-- `include_sub_domains=` - Determines whether the includeSubDomains flag is set (default include_sub_domains="no")
-- `preload=` - Determines whether the `preload` flag is set (default preload="no")
-- `env_https=` - Determines whether the `env` parameter is set to https (default env_https="no")
+- `max_age=` (value) - Sets the value for the max-age parameter, ignored if set to non-value (default `max_age="86400"`)
+- `include_sub_domains=` (yes/no) - Determines whether the includeSubDomains flag is set (default `include_sub_domains="no"`)
+- `preload=` (yes/no) - Determines whether the `preload` flag is set (default `preload="no"`)
+- `env_https=` (yes/no) - Determines whether the `env` parameter is set to https (default `env_https="no"`)
 
 #### More information
 
