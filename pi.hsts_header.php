@@ -7,7 +7,7 @@ HSTS Header Plugin for ExpressionEngine 3 & 4
 https://JCOGS.net
 -----------------------------------------------------
 
-This plugin allows you to set HTTP HSTS Header in your template.  
+This plugin allows you to set the HTTP HSTS Header in your template.  
 It was inspired by (and fills a gap in) Ellis Labs http_header add-on that ships with EE3/4.
 
 =====================================================
@@ -28,7 +28,7 @@ class Hsts_header {
 	/**
      * @var string
      */
-    public $version = URL_HELPER_VERSION;
+    public $version = HSTS_HEADER_VERSION;
 
 	public function __construct()
 	{
