@@ -31,7 +31,7 @@ This will set a header equivalent to
 - `max_age=` - Sets the value for the max-age parameter (default max_age="86400")
 - `include_sub_domains=` - Determines whether the includeSubDomains flag is set (default include_sub_domains="no")
 - `preload=` - Determines whether the `preload` flag is set (default preload="no")
-- `env_https` - Determines whether the `env` parameter is set to https (default env_https="no")
+- `env_https=` - Determines whether the `env` parameter is set to https (default env_https="no")
 
 #### More information
 
