@@ -44,6 +44,6 @@ More information on the Strict-Transport-Security header from [OWASP](https://ww
 - Initial release. Whoop!
 
 ## License
-Updated: 24 October 2018
+Updated: 17 January 2019
 
-Copyright 2018 [JCOGS Design](https://JCOGS.net). Licensed under the [Apache License, Version 2.0](https://github.com/JCOGSDesign/hsts_header/blob/master/LICENSE).
+Copyright 2018, 2019 [JCOGS Design](https://JCOGS.net). Licensed under the [Apache License, Version 2.0](https://github.com/JCOGSDesign/hsts_header/blob/master/LICENSE).
