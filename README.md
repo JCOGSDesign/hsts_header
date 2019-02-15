@@ -16,28 +16,32 @@ This is a single tag that will set the HSTS header to sensible default values or
 
 This will set the header using default values, equivalent to 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Header set Strict-Transport-Security "max-age=86400"`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Header set Strict-Transport-Security max-age=86400`
 
 ##### Advanced usage
 
-&nbsp;&nbsp;&nbsp; `{exp:hsts_header max_age="31415926" include_sub_domains="yes" preload="yes" env_https="yes"}`
+&nbsp;&nbsp;&nbsp; `{exp:hsts_header max_age="31415926" include_sub_domains="yes" preload="yes"}`
 
 This will set a header equivalent to 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Header set Strict-Transport-Security "max-age=31415926; includeSubDomains; preload" env=HTTPS`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Header set Strict-Transport-Security max-age=31415926; includeSubDomains; preload`
 
 #### Parameters
 
 - `max_age=` (value) - Sets the value for the max-age parameter, ignored if set to non-value (default `max_age="86400"`)
 - `include_sub_domains=` (yes/no) - Determines whether the includeSubDomains flag is set (default `include_sub_domains="no"`)
 - `preload=` (yes/no) - Determines whether the `preload` flag is set (default `preload="no"`)
-- `env_https=` (yes/no) - Determines whether the `env` parameter is set to https (default `env_https="no"`)
 
 #### More information
 
 More information on the Strict-Transport-Security header from [OWASP](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
 
 ## Change Log
+
+### 1.0.1
+
+- Updated to improve clarity of header generated (spaces, no quotes)
+- Remove the env_https variable as not part of standard
 
 ### 1.0.0
 

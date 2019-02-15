@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('HSTS_HEADER_VERSION')) {
-    define('HSTS_HEADER_VERSION', '1.0.0');
+    define('HSTS_HEADER_VERSION', '1.0.1');
 }
 
 return array(
