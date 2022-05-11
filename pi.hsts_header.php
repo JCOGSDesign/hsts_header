@@ -32,7 +32,7 @@ class Hsts_header {
 
 	public function __construct()
 	{
-		$set_header = '"';
+		$set_header = '';
 		$set_env = '';
 
 		foreach (ee()->TMPL->tagparams as $key => $value)
@@ -42,26 +42,27 @@ class Hsts_header {
 
 			if ($key === 'max_age' && is_numeric($value))
 			{
-				$set_header .= 'max-age='.$value.';';
+				$set_header .= 'max-age='.$value.'; ';
 			} 
 			if ($key === 'include_sub_domains' && $value === 'yes')
 			{
-				$set_header .= 'includeSubDomains;';
+				$set_header .= 'includeSubDomains; ';
 			}
 			if ($key === 'preload' && $value === 'yes')
 			{
-				$set_header .= 'preload';
+				$set_header .= ' preload ';
 			}
-			if ($key === 'env_https' && $value === 'yes')
-			{
-				$set_env .= 'env=HTTPS';
-			}
+// Removed env_https variable as not supported it seems in standard - see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+			// if ($key === 'env_https' && $value === 'yes')
+			// {
+			// 	$set_env .= 'env=HTTPS';
+			// }
 		}
 		if (strpos($set_header, 'max-age') === false)  // we didn't get a value for max-age specified
 		{
-			$set_header .= 'max-age=86400;';
+			$set_header .= 'max-age=86400; ';
 		}
-		$set_header .= '"';
+		$set_header .= '';
 		$submit_header = $set_header.' '.$set_env;
 		ee('Response')->setHeader('Strict-Transport-Security', $submit_header);
 		return;
